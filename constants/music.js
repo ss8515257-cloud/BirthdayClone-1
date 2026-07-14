@@ -1,0 +1,56 @@
+export const MUSIC_STORAGE_KEYS = {
+  track: 'gurleen-music-track',
+  volume: 'gurleen-music-volume',
+  muted: 'gurleen-music-muted',
+  enabled: 'gurleen-music-enabled',
+  skipped: 'gurleen-music-skipped',
+  chosen: 'gurleen-music-chosen',
+};
+
+export const MUSIC_TRACKS = [
+  {
+    id: 'soft-piano',
+    name: 'Soft Piano',
+    emoji: '🎹',
+    src: '/assets/music/soft-piano.mp3',
+    description: 'Gentle keys floating through moonlight',
+    mood: 'Elegant & calm',
+    color: '#C8B6E2',
+  },
+  {
+    id: 'romantic-instrumental',
+    name: 'Romantic Instrumental',
+    emoji: '🌸',
+    src: '/assets/music/romantic-instrumental.mp3',
+    description: 'Tender strings wrapped in warmth',
+    mood: 'Romantic & dreamy',
+    color: '#E8A0BF',
+  },
+  {
+    id: 'lofi',
+    name: 'Lo-Fi',
+    emoji: '🌙',
+    src: '/assets/music/lofi.mp3',
+    description: 'Cozy beats under a starlit sky',
+    mood: 'Chill & nostalgic',
+    color: '#D4BBFC',
+  },
+  {
+    id: 'acoustic-guitar',
+    name: 'Acoustic Guitar',
+    emoji: '🎻',
+    src: '/assets/music/acoustic-guitar.mp3',
+    description: 'Fingerpicked melodies by candlelight',
+    mood: 'Warm & intimate',
+    color: '#FFDAB9',
+  },
+  {
+    id: 'calm-ambient',
+    name: 'Calm Ambient',
+    emoji: '☁️',
+    src: '/assets/music/calm-ambient.mp3',
+    description: 'Ethereal soundscapes like drifting clouds',
+    mood: 'Peaceful & serene',
+    color: '#F7E7CE',
+  },
+];
