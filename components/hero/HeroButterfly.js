@@ -76,9 +76,9 @@ function ButterflySVG({ color }) {
     <svg width="32" height="28" viewBox="0 0 32 28" fill="none">
       <ellipse cx="10" cy="14" rx="10" ry="12" fill={color} opacity="0.8" />
       <ellipse cx="22" cy="14" rx="10" ry="12" fill={color} opacity="0.6" />
-      <ellipse cx="16" cy="14" rx="2" ry="10" fill="#302B63" />
-      <line x1="16" y1="4" x2="14" y2="0" stroke="#302B63" strokeWidth="1" />
-      <line x1="16" y1="4" x2="18" y2="0" stroke="#302B63" strokeWidth="1" />
+      <ellipse cx="16" cy="14" rx="2" ry="10" fill="#7E22CE" />
+      <line x1="16" y1="4" x2="14" y2="0" stroke="#7E22CE" strokeWidth="1" />
+      <line x1="16" y1="4" x2="18" y2="0" stroke="#7E22CE" strokeWidth="1" />
     </svg>
   );
 }

@@ -35,7 +35,7 @@ export default function LetterSection() {
           emoji="💌"
         />
 
-        <div className="relative min-h-[28rem]">
+        <div className="relative min-h-[20rem] sm:min-h-[28rem]">
           <AnimatePresence mode="wait">
             {!open ? (
               <motion.div

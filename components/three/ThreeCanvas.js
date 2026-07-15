@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { useReducedMotion } from '@/hooks';
+import { useReducedMotion, useIsMobile } from '@/hooks';
 import { cn } from '@/utils';
 
 export default function ThreeCanvas({
@@ -13,6 +13,7 @@ export default function ThreeCanvas({
 }) {
   const [Canvas, setCanvas] = useState(null);
   const prefersReducedMotion = useReducedMotion();
+  const isMobile = useIsMobile();
   const [dpr, setDpr] = useState(1);
 
   const { ref: inViewRef, inView } = useInView({
@@ -26,7 +27,8 @@ export default function ThreeCanvas({
     import('@react-three/fiber').then((mod) => {
       if (mounted) {
         setCanvas(() => mod.Canvas);
-        setDpr(Math.min(window.devicePixelRatio, 2));
+        const isMobile = window.innerWidth < 768;
+        setDpr(Math.min(window.devicePixelRatio, isMobile ? 1.25 : 2));
       }
     });
 
@@ -69,7 +71,7 @@ export default function ThreeCanvas({
         dpr={prefersReducedMotion ? 1 : dpr}
         frameloop={inView ? 'always' : 'demand'}
         gl={{
-          antialias: true,
+          antialias: !isMobile,
           alpha: true,
           powerPreference: 'high-performance',
         }}

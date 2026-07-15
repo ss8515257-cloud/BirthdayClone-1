@@ -18,7 +18,7 @@ export default function SectionHeader({
   return (
     <motion.header
       className={cn(
-        'mb-12 flex flex-col gap-3',
+        'mb-8 flex flex-col gap-2 sm:mb-12 sm:gap-3',
         alignments[align],
         className
       )}
@@ -33,7 +33,7 @@ export default function SectionHeader({
         </span>
       )}
       {subtitle && (
-        <p className="font-dancing text-xl text-rose-pink sm:text-2xl">
+        <p className="font-dancing text-xl text-cream-white/90 sm:text-2xl">
           {subtitle}
         </p>
       )}

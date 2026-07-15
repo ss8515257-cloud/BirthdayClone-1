@@ -93,7 +93,7 @@ export default function LanternsCanvas({ className, onLanternReveal }) {
     const height = container.clientHeight;
 
     const scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x0f0c29, 0.04);
+    scene.fog = new THREE.FogExp2(0x3b0764, 0.04);
 
     const camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 100);
     camera.position.z = 5;

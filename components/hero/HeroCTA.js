@@ -46,7 +46,7 @@ export default function HeroCTA({ onClick }) {
         onClick={handleClick}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="btn-magnetic relative overflow-hidden bg-gradient-to-r from-rose-pink via-lavender to-rose-pink bg-[length:200%_100%] px-10 py-4 text-lg font-semibold text-night-sky shadow-glow-lg"
+        className="btn-magnetic relative overflow-hidden bg-gradient-to-r from-rose-pink via-lavender to-rose-pink bg-[length:200%_100%] px-6 py-3 text-base font-semibold text-night-sky shadow-glow-lg sm:px-10 sm:py-4 sm:text-lg"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -84,7 +84,7 @@ export default function HeroCTA({ onClick }) {
       </motion.button>
 
       <motion.div
-        className="flex flex-col items-center gap-1 text-cream-white/40"
+        className="flex flex-col items-center gap-1 text-cream-white/60"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}

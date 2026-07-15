@@ -54,7 +54,7 @@ export default function MagicalBackground() {
     resize();
     window.addEventListener('resize', resize);
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < (window.innerWidth < 768 ? 25 : 50); i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -121,11 +121,11 @@ export default function MagicalBackground() {
         />
       ))}
 
-      <div className="absolute right-[10%] top-[10%] text-5xl opacity-30">
+      <div className="absolute right-[10%] top-[10%] text-3xl opacity-30 sm:text-5xl">
         🌙
       </div>
-      <div className="absolute left-[5%] top-[15%] text-3xl opacity-20">☁️</div>
-      <div className="absolute right-[20%] top-[25%] text-2xl opacity-20">
+      <div className="absolute left-[5%] top-[15%] hidden text-3xl opacity-20 sm:block">☁️</div>
+      <div className="absolute right-[20%] top-[25%] hidden text-2xl opacity-20 sm:block">
         ☁️
       </div>
     </div>

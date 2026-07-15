@@ -43,7 +43,7 @@ export default function WishGarden() {
       <FallingPetals />
 
       {/* Garden area */}
-      <div className="relative mx-auto min-h-[520px] w-full max-w-5xl sm:min-h-[580px]">
+      <div className="relative mx-auto min-h-[400px] w-full max-w-5xl sm:min-h-[520px] md:min-h-[580px]">
         {/* Floating bubbles */}
         <div className="absolute inset-0 hidden sm:block" aria-hidden={focusedIndex !== null}>
           {WISH_BUBBLE_POSITIONS.map((pos, i) => {
@@ -63,7 +63,7 @@ export default function WishGarden() {
         </div>
 
         {/* Featured wish — centered */}
-        <div className="relative z-20 flex min-h-[520px] items-center justify-center px-2 sm:min-h-[580px]">
+        <div className="relative z-20 flex min-h-[400px] items-center justify-center px-2 sm:min-h-[520px] md:min-h-[580px]">
           <FeaturedWish
             activeIndex={featuredIndex}
             onIndexChange={setFeaturedIndex}
@@ -71,7 +71,7 @@ export default function WishGarden() {
         </div>
       </div>
 
-      <p className="relative z-10 mt-6 text-center font-dancing text-lg text-rose-pink/70">
+      <p className="relative z-10 mt-6 text-center font-dancing text-lg text-cream-white/80">
         <span className="hidden sm:inline">{BIRTHDAY_WISHES_META.tapHint}</span>
         <span className="sm:hidden">Swipe through wishes below</span>
       </p>
@@ -88,7 +88,7 @@ export default function WishGarden() {
               className="shrink-0 rounded-2xl border border-white/20 bg-gradient-to-br from-rose-pink/25 to-lavender/15 px-4 py-3 text-left shadow-glass backdrop-blur-md"
             >
               <span className="mb-1 block text-sm" aria-hidden="true">🌸</span>
-              <span className="block max-w-[200px] font-dancing text-sm text-cream-white/90">
+              <span className="block max-w-[200px] font-dancing text-sm text-cream-white/95">
                 {wish.length > 40 ? `${wish.slice(0, 40)}…` : wish}
               </span>
             </button>
@@ -96,7 +96,7 @@ export default function WishGarden() {
         })}
       </div>
 
-      <p className="relative z-10 mt-2 text-center font-poppins text-sm text-cream-white/40">
+      <p className="relative z-10 mt-2 text-center font-poppins text-sm text-cream-white/60">
         {BIRTHDAY_WISHES.length} {BIRTHDAY_WISHES_META.totalLabel}
       </p>
 

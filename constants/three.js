@@ -50,7 +50,7 @@ export const SCENE_COLORS = {
   balloon: '#E8A0BF',
   balloonAccent: '#C8B6E2',
   firefly: '#F7E7CE',
-  cloud: '#302B63',
+  cloud: '#7E22CE',
   line: '#E8A0BF',
 };
 

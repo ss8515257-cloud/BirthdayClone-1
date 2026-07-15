@@ -12,7 +12,7 @@ export default function IntroExperience({ onComplete }) {
 
   return (
     <motion.div
-      className="flex h-full w-full flex-col items-center justify-center bg-gradient-night"
+      className="flex h-full w-full flex-col items-center justify-center bg-gradient-night px-4"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -33,7 +33,7 @@ export default function IntroExperience({ onComplete }) {
       ))}
 
       <motion.p
-        className="mb-8 font-dancing text-2xl text-lavender sm:text-3xl md:text-4xl"
+        className="mb-6 font-dancing text-xl text-cream-white/95 sm:mb-8 sm:text-3xl md:text-4xl"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, delay: 0.5 }}
@@ -51,7 +51,7 @@ export default function IntroExperience({ onComplete }) {
       </motion.h1>
 
       <motion.div
-        className="absolute bottom-20 text-4xl"
+        className="absolute bottom-12 text-3xl sm:bottom-20 sm:text-4xl"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 3 }}

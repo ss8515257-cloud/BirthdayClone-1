@@ -18,7 +18,7 @@ function SceneContent({ onLanternReveal }) {
       <Moon position={[5, 3, -8]} />
       <Clouds />
       <CameraParallax strength={0.3} />
-      <fog attach="fog" args={['#0F0C29', 10, 30]} />
+      <fog attach="fog" args={['#3B0764', 10, 30]} />
 
       {LANTERN_POSITIONS.map((pos, i) => (
         <Lantern

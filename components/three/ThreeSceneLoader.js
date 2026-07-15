@@ -36,7 +36,7 @@ export default function ThreeSceneLoader({
     return (
       <div
         className={cn(
-          'flex h-full w-full items-center justify-center text-sm text-cream-white/50',
+          'flex h-full w-full items-center justify-center text-sm text-cream-white/70',
           className
         )}
       >

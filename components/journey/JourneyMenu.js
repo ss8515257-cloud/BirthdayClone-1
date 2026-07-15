@@ -38,7 +38,7 @@ function JourneyCard({ card, onSelect, index }) {
       onClick={() => onSelect(card.id)}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`glass-card-hover group relative w-full max-w-sm cursor-pointer p-8 text-left transition-transform duration-300`}
+      className={`glass-card-hover group relative w-full max-w-sm cursor-pointer p-5 text-left transition-transform duration-300 sm:p-8`}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.2, duration: 0.6 }}
@@ -50,11 +50,11 @@ function JourneyCard({ card, onSelect, index }) {
         className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${card.gradient} opacity-0 transition-opacity group-hover:opacity-100`}
       />
       <div className="relative z-10">
-        <span className="mb-4 block text-5xl">{card.emoji}</span>
-        <h3 className="mb-2 font-playfair text-2xl font-bold text-cream-white">
+        <span className="mb-3 block text-4xl sm:mb-4 sm:text-5xl">{card.emoji}</span>
+        <h3 className="mb-2 font-playfair text-xl font-bold text-cream-white sm:text-2xl">
           {card.title}
         </h3>
-        <p className="text-sm text-cream-white/70">{card.description}</p>
+        <p className="text-sm text-cream-white/85">{card.description}</p>
       </div>
       <motion.div
         className="absolute -inset-1 -z-10 rounded-2xl bg-rose-pink/20 opacity-0 blur-xl transition-opacity group-hover:opacity-100"
@@ -73,7 +73,7 @@ export default function JourneyMenu({ onSelect }) {
 
   return (
     <motion.div
-      className="flex h-full w-full flex-col items-center justify-center bg-gradient-night px-4"
+      className="flex h-full w-full flex-col items-center justify-center bg-gradient-night px-4 py-8 sm:py-0"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -87,7 +87,7 @@ export default function JourneyMenu({ onSelect }) {
       </motion.h2>
 
       <motion.p
-        className="mb-12 text-center text-cream-white/60"
+        className="mb-8 text-center text-sm text-cream-white/75 sm:mb-12"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
@@ -95,7 +95,7 @@ export default function JourneyMenu({ onSelect }) {
         Every path leads to something magical
       </motion.p>
 
-      <div className="grid w-full max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid w-full max-w-5xl gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
         {JOURNEY_CARDS.map((card, index) => (
           <JourneyCard
             key={card.id}

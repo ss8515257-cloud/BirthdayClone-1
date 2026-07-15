@@ -64,7 +64,7 @@ export default function LoveMeter({ meter, index }) {
             <h3 className="font-playfair text-lg text-cream-white sm:text-xl">
               {label}
             </h3>
-            <p className="font-dancing text-sm text-rose-pink/70">{caption}</p>
+            <p className="font-dancing text-sm text-cream-white/80">{caption}</p>
           </div>
         </div>
 
@@ -88,7 +88,7 @@ export default function LoveMeter({ meter, index }) {
             </motion.span>
           )}
           {!overflow && (
-            <span className="text-sm text-cream-white/40">%</span>
+            <span className="text-sm text-cream-white/60">%</span>
           )}
         </div>
       </div>

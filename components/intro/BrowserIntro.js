@@ -29,13 +29,13 @@ export default function BrowserIntro({ onComplete }) {
             <div className="h-3 w-3 rounded-full bg-yellow-400" />
             <div className="h-3 w-3 rounded-full bg-green-400" />
           </div>
-          <div className="ml-4 flex-1 rounded-md bg-white/10 px-4 py-1.5 text-sm text-cream-white/70">
+          <div className="ml-4 flex-1 rounded-md bg-white/10 px-4 py-1.5 text-sm text-cream-white/85">
             {SITE_CONFIG.url.replace('https://', '')}
           </div>
         </div>
 
         <motion.div
-          className="flex h-64 items-center justify-center bg-gradient-night sm:h-80"
+          className="flex h-48 items-center justify-center bg-gradient-night sm:h-64 md:h-80"
           animate={{ scale: [1, 1.02, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
@@ -45,7 +45,7 @@ export default function BrowserIntro({ onComplete }) {
             transition={{ delay: 1 }}
             className="text-center"
           >
-            <p className="font-dancing text-3xl text-rose-pink sm:text-4xl">
+            <p className="font-dancing text-2xl text-cream-white/90 sm:text-4xl">
               Welcome to something magical...
             </p>
           </motion.div>

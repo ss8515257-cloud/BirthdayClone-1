@@ -12,12 +12,12 @@ function SceneContent() {
     <>
       <ambientLight intensity={0.2} />
       <directionalLight position={[5, 8, 5]} intensity={0.5} color="#F7E7CE" />
-      <hemisphereLight args={['#C8B6E2', '#0F0C29', 0.4]} />
+      <hemisphereLight args={['#C8B6E2', '#3B0764', 0.4]} />
       <StarField count={1000} />
       <Clouds />
       <HotAirBalloon />
       <CameraParallax strength={0.2} />
-      <fog attach="fog" args={['#302B63', 12, 35]} />
+      <fog attach="fog" args={['#7E22CE', 12, 35]} />
     </>
   );
 }

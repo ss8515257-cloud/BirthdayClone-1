@@ -17,9 +17,14 @@ export const COLORS = {
   peach: '#FFDAB9',
   roseGold: '#B76E79',
   champagneGold: '#F7E7CE',
-  nightSky: '#0F0C29',
-  deepPurple: '#302B63',
-  twilight: '#24243E',
+  warmPearl: '#FFF5F7',
+  blush: '#FCE7F3',
+  petal: '#FBCFE8',
+  bubblegum: '#F9A8D4',
+  softLilac: '#EDE9FE',
+  nightSky: '#3B0764',
+  deepPurple: '#7E22CE',
+  twilight: '#581C87',
 };
 
 export const FONTS = {
@@ -58,13 +63,13 @@ export const LOADING_MESSAGES = [
 ];
 
 export const INTRO_TEXT = {
-  subtitle: '✨ For Someone Truly Special ✨',
-  name: '❤️ Gurleen ❤️',
+  subtitle: '🧸 ✨ For Someone Truly Special ✨ 🧸',
+  name: 'Gurleen',
 };
 
 export const HERO_TEXT = {
   title: 'Happy Birthday',
-  subtitle: 'My Beautiful Gurleen ❤️',
+  subtitle: 'Dear Gurleen',
   cta: 'Open Your Surprise',
 };
 
@@ -84,7 +89,7 @@ export const FINAL_MESSAGE = {
   signature: '❤️',
   endTitle: 'The End',
   endCredit: 'Made with ❤️',
-  forName: 'For Gurleen, with endless love',
+  forName: 'For Gurleen, with endless love & wishes',
   forever: 'Forever & Always',
 };
 
@@ -161,7 +166,7 @@ export const CELEBRATION_GIFT = {
   title: 'Happy Birthday, Gurleen!',
   message:
     'You are the most wonderful gift this world could ever receive. May your day overflow with love, laughter, and magic beyond measure.',
-  signature: 'With all my love ❤️',
+  signature: 'With all my love ',
   celebrateAgain: 'Celebrate again!',
 };
 

@@ -26,7 +26,7 @@ export default function BookCover({ onOpen }) {
         <h3 className="mb-4 font-playfair text-4xl font-bold text-gradient-gold sm:text-5xl">
           Gurleen
         </h3>
-        <div className="mb-6 flex items-center justify-center gap-3 text-champagne-gold/60">
+        <div className="mb-6 flex items-center justify-center gap-3 text-cream-white/50">
           <span className="h-px w-12 bg-champagne-gold/40" />
           <span>✦</span>
           <span className="h-px w-12 bg-champagne-gold/40" />

@@ -47,7 +47,7 @@ export default function SunriseSection() {
       noPadding
       className="relative"
     >
-      <div ref={containerRef} className="relative h-[250vh]">
+      <div ref={containerRef} className="relative h-[180vh] sm:h-[220vh] md:h-[250vh]">
         <div className="sticky top-0 h-screen min-h-screen-safe">
           <SunriseScene progress={scrollYProgress} />
 
@@ -58,10 +58,10 @@ export default function SunriseSection() {
               animate={{ opacity: [1, 0.4, 1], y: [0, 8, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <p className="font-poppins text-xs uppercase tracking-widest text-cream-white/50">
+              <p className="font-poppins text-xs uppercase tracking-widest text-cream-white/70">
                 {SUNRISE_META.scrollHint}
               </p>
-              <span className="mt-1 block text-lg text-cream-white/40" aria-hidden="true">
+              <span className="mt-1 block text-lg text-cream-white/60" aria-hidden="true">
                 ↓
               </span>
             </motion.div>

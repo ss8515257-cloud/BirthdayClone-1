@@ -29,7 +29,7 @@ export default function GallerySection() {
           emoji="📸"
         />
 
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-8 lg:grid-cols-4">
           {GALLERY_PHOTOS.map((photo, i) => (
             <Polaroid
               key={photo.id}
@@ -40,7 +40,7 @@ export default function GallerySection() {
           ))}
         </div>
 
-        <p className="mt-10 text-center font-dancing text-lg text-rose-pink/70">
+        <p className="mt-10 text-center text-hint text-lg">
           Tap a photo to relive the moment
         </p>
       </Container>

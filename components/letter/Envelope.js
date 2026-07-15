@@ -71,7 +71,7 @@ export default function Envelope({ onOpen }) {
         </div>
       </motion.div>
 
-      <p className="mt-8 text-center font-dancing text-lg text-rose-pink/80">
+      <p className="mt-6 text-center font-dancing text-base text-cream-white/95 sm:mt-8 sm:text-lg">
         {LETTER_META.openHint}
       </p>
     </motion.div>

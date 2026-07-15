@@ -121,7 +121,7 @@ function createBird(THREE, startX, startY, startZ, speed) {
   bird.position.set(startX, startY, startZ);
   bird.userData = { speed, startX, startY, startZ };
 
-  const wingMat = new THREE.MeshBasicMaterial({ color: '#302B63' });
+  const wingMat = new THREE.MeshBasicMaterial({ color: '#7E22CE' });
   const left = new THREE.Mesh(new THREE.ConeGeometry(0.04, 0.12, 3), wingMat);
   left.rotation.z = 0.5;
   const right = new THREE.Mesh(new THREE.ConeGeometry(0.04, 0.12, 3), wingMat);
@@ -147,7 +147,7 @@ export default function HotAirBalloonCanvas({ className }) {
     const height = container.clientHeight;
 
     const scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x302b63, 0.025);
+    scene.fog = new THREE.FogExp2(0x7e22ce, 0.025);
 
     const camera = new THREE.PerspectiveCamera(50, width / height, 0.1, 100);
     camera.position.set(0, 1, 8);
@@ -195,7 +195,7 @@ export default function HotAirBalloonCanvas({ className }) {
     const sun = new THREE.DirectionalLight(0xf7e7ce, 0.45);
     sun.position.set(5, 8, 5);
     scene.add(sun);
-    scene.add(new THREE.HemisphereLight(0xc8b6e2, 0x0f0c29, 0.35));
+    scene.add(new THREE.HemisphereLight(0xc8b6e2, 0x3b0764, 0.35));
 
     // Clouds
     const clouds = [];
@@ -207,7 +207,7 @@ export default function HotAirBalloonCanvas({ className }) {
       const cloud = new THREE.Group();
       cloud.position.set(x, y, z);
       const mat = new THREE.MeshStandardMaterial({
-        color: 0x302b63,
+        color: 0x7e22ce,
         transparent: true,
         opacity: 0.18,
         roughness: 1,

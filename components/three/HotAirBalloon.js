@@ -104,11 +104,11 @@ function Bird({ position, speed }) {
     <group ref={ref} position={position}>
       <mesh rotation={[0, 0, 0.5]}>
         <coneGeometry args={[0.04, 0.1, 3]} />
-        <meshBasicMaterial color="#302B63" />
+        <meshBasicMaterial color="#7E22CE" />
       </mesh>
       <mesh rotation={[0, 0, -0.5]} position={[0.06, 0.02, 0]}>
         <coneGeometry args={[0.04, 0.1, 3]} />
-        <meshBasicMaterial color="#302B63" />
+        <meshBasicMaterial color="#7E22CE" />
       </mesh>
     </group>
   );

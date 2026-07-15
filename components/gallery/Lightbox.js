@@ -37,7 +37,7 @@ export default function Lightbox({ photos, index, onClose, onNavigate }) {
     <AnimatePresence>
       {isOpen && photo && (
         <motion.div
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+          className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -53,7 +53,7 @@ export default function Lightbox({ photos, index, onClose, onNavigate }) {
           <button
             type="button"
             onClick={onClose}
-            className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-cream-white backdrop-blur transition hover:bg-white/20"
+            className="absolute right-2 top-2 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-cream-white backdrop-blur transition hover:bg-white/20 sm:right-4 sm:top-4"
             aria-label="Close"
           >
             <X className="h-6 w-6" />
@@ -88,7 +88,7 @@ export default function Lightbox({ photos, index, onClose, onNavigate }) {
           {/* Framed photo */}
           <motion.div
             key={photo.id}
-            className="relative z-[1] w-full max-w-lg rounded-lg bg-cream-white p-4 pb-16 shadow-premium"
+            className="relative z-[1] w-full max-w-lg rounded-lg bg-cream-white p-3 pb-12 shadow-premium sm:p-4 sm:pb-16"
             initial={{ scale: 0.85, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.85, opacity: 0, y: 20 }}
@@ -116,7 +116,7 @@ export default function Lightbox({ photos, index, onClose, onNavigate }) {
               )}
             </div>
             <div className="absolute inset-x-0 bottom-4 px-4 text-center">
-              <p className="font-dancing text-2xl text-night-sky/85">
+              <p className="font-dancing text-lg text-night-sky/85 sm:text-2xl">
                 {photo.caption}
               </p>
               {photo.date && (

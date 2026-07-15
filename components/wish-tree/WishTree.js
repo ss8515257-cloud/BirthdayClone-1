@@ -170,17 +170,17 @@ export default function WishTree() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.5 }}
             >
-              <p className="mb-2 font-poppins text-xs uppercase tracking-widest text-champagne-gold/70">
+              <p className="mb-2 font-poppins text-xs uppercase tracking-widest text-cream-white/70">
                 {WISH_TREE_META.revealedLabel}
               </p>
-              <p className="font-dancing text-xl leading-relaxed text-cream-white sm:text-2xl">
+              <p className="font-dancing text-xl leading-relaxed text-cream-white/95 sm:text-2xl">
                 &ldquo;{activeWish}&rdquo;
               </p>
             </motion.div>
           ) : (
             <motion.p
               key="hint"
-              className="text-center font-dancing text-lg text-rose-pink/70"
+              className="text-center text-hint text-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
@@ -191,7 +191,7 @@ export default function WishTree() {
       </div>
 
       {pickedLeaves.size > 0 && (
-        <p className="mt-4 text-center font-poppins text-sm text-cream-white/40">
+        <p className="mt-4 text-center font-poppins text-sm text-cream-white/60">
           {pickedLeaves.size} / {TREE_LEAF_POSITIONS.length}{' '}
           {WISH_TREE_META.pickedLabel}
         </p>

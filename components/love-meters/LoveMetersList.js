@@ -14,7 +14,7 @@ export default function LoveMetersList() {
       </div>
 
       <motion.p
-        className="mt-10 text-center font-dancing text-xl text-champagne-gold sm:text-2xl"
+        className="mt-10 text-center font-dancing text-xl text-cream-white/95 sm:text-2xl"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -23,7 +23,7 @@ export default function LoveMetersList() {
         {LOVE_METERS_META.footer}
       </motion.p>
 
-      <p className="mt-3 text-center font-poppins text-xs uppercase tracking-widest text-cream-white/40">
+      <p className="mt-3 text-center font-poppins text-xs uppercase tracking-widest text-cream-white/60">
         {LOVE_METERS_META.hint}
       </p>
     </div>

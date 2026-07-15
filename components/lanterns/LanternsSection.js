@@ -36,7 +36,7 @@ export default function LanternsSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-night-sky via-twilight to-night-sky" />
 
       <div className="relative z-10 flex min-h-screen flex-col">
-        <Container className="pt-28 pb-4">
+        <Container className="section-header-offset pb-4">
           <SectionHeader
             title="Floating Lanterns"
             subtitle="Carrying wishes to the sky"
@@ -44,7 +44,7 @@ export default function LanternsSection() {
           />
         </Container>
 
-        <div className="relative mx-auto h-[55vh] w-full max-w-6xl sm:h-[60vh]">
+        <div className="canvas-height relative mx-auto w-full max-w-6xl">
           <LanternsCanvas
             onLanternReveal={handleLanternReveal}
             className="h-full w-full"
@@ -52,7 +52,7 @@ export default function LanternsSection() {
         </div>
 
         <Container className="pb-16 pt-6">
-          <p className="text-center font-dancing text-lg text-cream-white/50">
+          <p className="text-center font-dancing text-lg text-cream-white/70">
             Tap a lantern to reveal a hidden message
           </p>
 
@@ -65,7 +65,7 @@ export default function LanternsSection() {
                 exit={{ opacity: 0, y: -10, scale: 0.95 }}
                 role="status"
               >
-                <p className="font-dancing text-xl text-rose-pink">
+                <p className="font-dancing text-xl text-cream-white/95">
                   {activeMessage}
                 </p>
               </motion.div>

@@ -355,6 +355,11 @@ export const MEMORY_BOOK_COVER = {
   subtitle: 'A story written in moments of magic',
 };
 
+function galleryAvatar(seed, backgroundColor) {
+  const bg = backgroundColor.replace('#', '');
+  return `https://api.dicebear.com/7.x/lorelei/png?seed=${encodeURIComponent(seed)}&backgroundColor=${bg}&size=512`;
+}
+
 export const GALLERY_PHOTOS = [
   {
     id: 1,
@@ -363,7 +368,7 @@ export const GALLERY_PHOTOS = [
     color: '#E8A0BF',
     illustration: '🌅',
     rotate: -5,
-    src: '',
+    src: galleryAvatar('gurleen-golden', '#E8A0BF'),
   },
   {
     id: 2,
@@ -372,7 +377,7 @@ export const GALLERY_PHOTOS = [
     color: '#C8B6E2',
     illustration: '🍰',
     rotate: 3,
-    src: '',
+    src: galleryAvatar('gurleen-sweet', '#C8B6E2'),
   },
   {
     id: 3,
@@ -381,7 +386,7 @@ export const GALLERY_PHOTOS = [
     color: '#F7E7CE',
     illustration: '🌸',
     rotate: -2,
-    src: '',
+    src: galleryAvatar('gurleen-beautiful', '#F7E7CE'),
   },
   {
     id: 4,
@@ -390,7 +395,7 @@ export const GALLERY_PHOTOS = [
     color: '#FFDAB9',
     illustration: '🎈',
     rotate: 4,
-    src: '',
+    src: galleryAvatar('gurleen-joy', '#FFDAB9'),
   },
   {
     id: 5,
@@ -399,7 +404,7 @@ export const GALLERY_PHOTOS = [
     color: '#D4BBFC',
     illustration: '✨',
     rotate: -4,
-    src: '',
+    src: galleryAvatar('gurleen-lovely', '#D4BBFC'),
   },
   {
     id: 6,
@@ -408,7 +413,7 @@ export const GALLERY_PHOTOS = [
     color: '#B76E79',
     illustration: '💫',
     rotate: 2,
-    src: '',
+    src: galleryAvatar('gurleen-magic', '#B76E79'),
   },
   {
     id: 7,
@@ -417,7 +422,7 @@ export const GALLERY_PHOTOS = [
     color: '#E8A0BF',
     illustration: '💝',
     rotate: -3,
-    src: '',
+    src: galleryAvatar('gurleen-cherished', '#E8A0BF'),
   },
   {
     id: 8,
@@ -426,7 +431,7 @@ export const GALLERY_PHOTOS = [
     color: '#C8B6E2',
     illustration: '🌙',
     rotate: 5,
-    src: '',
+    src: galleryAvatar('gurleen-precious', '#C8B6E2'),
   },
 ];
 

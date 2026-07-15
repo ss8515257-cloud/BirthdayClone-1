@@ -49,7 +49,7 @@ export default function LoadingScreen({ onComplete }) {
           animate={{ scale: [1, 1.1, 1] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         >
-          <div className="text-6xl">❤️</div>
+          <div className="text-5xl sm:text-6xl">❤️</div>
           <motion.div
             className="absolute inset-0 rounded-full bg-rose-pink/30 blur-xl"
             animate={{ opacity: [0.3, 0.8, 0.3], scale: [1, 1.3, 1] }}
@@ -59,7 +59,7 @@ export default function LoadingScreen({ onComplete }) {
 
         <motion.p
           key={messageIndex}
-          className="mb-6 font-dancing text-2xl text-rose-pink sm:text-3xl"
+          className="mb-6 font-dancing text-xl text-cream-white/90 sm:mb-6 sm:text-3xl"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
@@ -67,7 +67,7 @@ export default function LoadingScreen({ onComplete }) {
           {LOADING_MESSAGES[messageIndex]}
         </motion.p>
 
-        <div className="h-1 w-48 overflow-hidden rounded-full bg-white/10 sm:w-64">
+        <div className="h-1 w-40 overflow-hidden rounded-full bg-white/10 sm:w-64">
           <motion.div
             className="h-full rounded-full bg-gradient-to-r from-rose-pink via-lavender to-champagne-gold"
             style={{ width: `${progress}%` }}

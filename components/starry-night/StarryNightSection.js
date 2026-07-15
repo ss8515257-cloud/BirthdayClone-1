@@ -34,7 +34,7 @@ export default function StarryNightSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-night-sky via-deep-purple/50 to-night-sky" />
 
       <div className="relative z-10 flex min-h-screen flex-col">
-        <Container className="pt-28 pb-4">
+        <Container className="section-header-offset pb-4">
           <SectionHeader
             title="Starry Night"
             subtitle="Touch the stars above"
@@ -42,7 +42,7 @@ export default function StarryNightSection() {
           />
         </Container>
 
-        <div className="relative mx-auto h-[55vh] w-full max-w-6xl sm:h-[60vh]">
+        <div className="canvas-height relative mx-auto w-full max-w-6xl">
           <StarryNightCanvas
             onStarTouch={handleStarTouch}
             className="h-full w-full"
@@ -54,7 +54,7 @@ export default function StarryNightSection() {
             <AnimatePresence>
               {showHint && (
                 <motion.p
-                  className="font-dancing text-lg text-lavender/80"
+                  className="font-dancing text-lg text-cream-white/70"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -64,21 +64,21 @@ export default function StarryNightSection() {
               )}
             </AnimatePresence>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-cream-white/50 sm:gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-cream-white/70 sm:gap-6">
               <span className="flex items-center gap-2">
                 <span className="text-rose-pink">❤️</span> Heart
               </span>
               <span className="flex items-center gap-2">
-                <span className="text-champagne-gold">G</span> Gurleen
+                <span className="text-cream-white/90">G</span> Gurleen
               </span>
               <span className="flex items-center gap-2">
-                <span className="text-lavender">✦</span> Happy Birthday
+                <span className="text-cream-white/85">✦</span> Happy Birthday
               </span>
             </div>
 
             {touchCount > 0 && (
               <motion.p
-                className="text-sm text-rose-pink/70"
+                className="text-sm text-cream-white/80"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
               >

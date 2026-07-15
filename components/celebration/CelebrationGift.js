@@ -59,7 +59,7 @@ export default function CelebrationGift() {
           {phase === 'idle' && (
             <motion.p
               key="hint"
-              className="font-dancing text-xl text-rose-pink/80 sm:text-2xl"
+              className="font-dancing text-xl text-cream-white/95 sm:text-2xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -71,7 +71,7 @@ export default function CelebrationGift() {
           {isOpening && (
             <motion.p
               key="opening"
-              className="font-dancing text-xl text-champagne-gold sm:text-2xl"
+              className="font-dancing text-xl text-cream-white/90 sm:text-2xl"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
@@ -83,7 +83,7 @@ export default function CelebrationGift() {
           {isOpened && (
             <motion.div
               key="revealed"
-              className="mx-auto max-w-md rounded-3xl border border-white/20 bg-gradient-to-br from-rose-pink/25 via-lavender/20 to-champagne-gold/25 p-8 shadow-premium backdrop-blur-md"
+              className="mx-auto max-w-md rounded-3xl border border-white/20 bg-gradient-to-br from-rose-pink/25 via-lavender/20 to-champagne-gold/25 p-5 shadow-premium backdrop-blur-md sm:p-8"
               initial={{ opacity: 0, y: 30, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ type: 'spring', stiffness: 200, damping: 20 }}
@@ -94,17 +94,17 @@ export default function CelebrationGift() {
               <h3 className="mb-4 font-playfair text-2xl text-gradient-gold sm:text-3xl">
                 {CELEBRATION_GIFT.title}
               </h3>
-              <p className="font-dancing text-lg leading-relaxed text-cream-white/90 sm:text-xl">
+              <p className="font-dancing text-lg leading-relaxed text-cream-white/95 sm:text-xl">
                 {CELEBRATION_GIFT.message}
               </p>
-              <p className="mt-6 font-dancing text-xl text-rose-pink">
+              <p className="mt-6 font-dancing text-xl text-cream-white/90">
                 {CELEBRATION_GIFT.signature}
               </p>
 
               <motion.button
                 type="button"
                 onClick={handleCelebrateAgain}
-                className="btn-magnetic mt-8 bg-gradient-to-r from-rose-pink to-lavender text-cream-white shadow-glow"
+                className="btn-magnetic mt-8 bg-gradient-to-r from-rose-pink to-lavender text-night-sky shadow-glow"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
               >

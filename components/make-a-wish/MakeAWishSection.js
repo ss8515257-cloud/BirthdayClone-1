@@ -101,12 +101,12 @@ export default function MakeAWishSection() {
           emoji="✨"
         />
 
-        <div className="relative flex min-h-[24rem] flex-col items-center justify-center">
+        <div className="relative flex min-h-[18rem] flex-col items-center justify-center sm:min-h-[24rem]">
           {/* Prompt text */}
           <AnimatePresence mode="wait">
             <motion.p
               key={currentText}
-              className="mb-12 text-center font-dancing text-2xl text-champagne-gold sm:text-3xl"
+              className="mb-8 text-center font-dancing text-xl text-cream-white/90 sm:mb-12 sm:text-2xl md:text-3xl"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}

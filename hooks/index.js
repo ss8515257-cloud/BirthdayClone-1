@@ -4,3 +4,4 @@ export { useLocalStorage } from './useLocalStorage';
 export { useMagnetic } from './useMagnetic';
 export { useHaptic } from './useHaptic';
 export { useActiveSection } from './useActiveSection';
+export { useMediaQuery, useIsMobile } from './useMediaQuery';

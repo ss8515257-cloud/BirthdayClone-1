@@ -51,14 +51,14 @@ export default function MusicControls() {
 
   return (
     <motion.div
-      className="safe-bottom fixed bottom-4 left-4 right-4 z-40 mx-auto max-w-md sm:left-auto sm:right-6 sm:mx-0"
+      className="safe-bottom fixed bottom-3 left-3 right-3 z-40 mx-auto max-w-md sm:bottom-4 sm:left-auto sm:right-6 sm:mx-0"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5 }}
     >
       <div className="glass-card overflow-hidden shadow-premium">
         {/* Collapsed bar */}
-        <div className="flex items-center gap-3 px-4 py-3">
+        <div className="flex items-center gap-2 px-3 py-2.5 sm:gap-3 sm:px-4 sm:py-3">
           <button
             onClick={handleTogglePlay}
             className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-rose-pink to-lavender text-night-sky shadow-glow transition-transform hover:scale-105"
@@ -81,7 +81,7 @@ export default function MusicControls() {
             <div className="flex items-center gap-2">
               <MusicVisualizer isPlaying={isPlaying} color={track.color} />
               {usingAmbient && (
-                <span className="text-[10px] text-cream-white/40">
+                <span className="text-[10px] text-cream-white/60">
                   ambient preview
                 </span>
               )}
@@ -90,7 +90,7 @@ export default function MusicControls() {
 
           <button
             onClick={() => setExpanded((e) => !e)}
-            className="flex h-8 w-8 items-center justify-center rounded-full text-cream-white/60 transition-colors hover:bg-white/10 hover:text-cream-white"
+            className="flex h-8 w-8 items-center justify-center rounded-full text-cream-white/75 transition-colors hover:bg-white/10 hover:text-white"
             aria-label={expanded ? 'Collapse controls' : 'Expand controls'}
             aria-expanded={expanded}
           >
@@ -113,7 +113,7 @@ export default function MusicControls() {
               className="overflow-hidden border-t border-white/10"
             >
               <div className="flex items-center gap-3 px-4 py-3">
-                <Volume2 className="h-4 w-4 shrink-0 text-cream-white/50" />
+                <Volume2 className="h-4 w-4 shrink-0 text-cream-white/70" />
                 <input
                   type="range"
                   min="0"
@@ -130,9 +130,11 @@ export default function MusicControls() {
                     'flex h-8 w-8 items-center justify-center rounded-full transition-colors',
                     isMuted
                       ? 'bg-rose-pink/20 text-rose-pink'
-                      : 'text-cream-white/60 hover:bg-white/10'
+                      : 'text-cream-white/75 hover:bg-white/10'
                   )}
-                  aria-label={isMuted ? 'Unmute' : 'Mute'}
+                  aria-label={
+                    !isPlaying ? 'Play music' : isMuted ? 'Unmute' : 'Mute'
+                  }
                 >
                   {isMuted ? (
                     <VolumeX className="h-4 w-4" />
@@ -142,7 +144,7 @@ export default function MusicControls() {
                 </button>
                 <button
                   onClick={openMusicSelector}
-                  className="flex h-8 w-8 items-center justify-center rounded-full text-cream-white/60 transition-colors hover:bg-white/10 hover:text-cream-white"
+                  className="flex h-8 w-8 items-center justify-center rounded-full text-cream-white/75 transition-colors hover:bg-white/10 hover:text-white"
                   aria-label="Change track"
                 >
                   <ListMusic className="h-4 w-4" />
@@ -166,7 +168,7 @@ export function MusicFab() {
         vibrate(10);
         openMusicSelector();
       }}
-      className="glass-card safe-bottom fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center shadow-glow"
+      className="glass-card safe-bottom fixed bottom-[5.25rem] right-4 z-40 flex h-11 w-11 items-center justify-center shadow-glow sm:bottom-6 sm:right-6 sm:h-12 sm:w-12"
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       whileHover={{ scale: 1.08 }}

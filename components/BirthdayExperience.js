@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { STAGES } from '@/constants/sections';
 import { useApp } from '@/lib/context';
@@ -32,8 +32,16 @@ const ExperienceLayout = dynamic(
 );
 
 export default function BirthdayExperience() {
-  const { setIsLoading } = useApp();
+  const { setIsLoading, setCurrentJourney, registerBackToJourney } = useApp();
   const [stage, setStage] = useState(STAGES.LOADING);
+
+  useEffect(() => {
+    return registerBackToJourney(() => {
+      setCurrentJourney(null);
+      setStage(STAGES.JOURNEY);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }, [registerBackToJourney, setCurrentJourney]);
 
   const handleLoadingComplete = () => {
     setIsLoading(false);

@@ -60,7 +60,7 @@ export default function WishBubble({
       <span className="mb-1 block text-base" aria-hidden="true">
         🌸
       </span>
-      <span className="font-dancing leading-snug text-cream-white/90">
+      <span className="font-dancing leading-snug text-cream-white/95">
         {snippet}
       </span>
     </motion.button>

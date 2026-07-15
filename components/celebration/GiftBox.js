@@ -1,16 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useReducedMotion } from '@/hooks';
+import { useReducedMotion, useIsMobile } from '@/hooks';
 import { cn } from '@/utils';
 
 const BOX_COLOR = '#E8A0BF';
 const RIBBON_COLOR = '#F7E7CE';
-const BOX_SIZE = 200;
 
 export default function GiftBox({ onOpen, isOpen, isOpening, className }) {
   const prefersReducedMotion = useReducedMotion();
+  const isMobile = useIsMobile();
   const disabled = isOpen || isOpening;
+  const boxSize = isMobile ? 160 : 200;
 
   return (
     <motion.button
@@ -52,11 +53,11 @@ export default function GiftBox({ onOpen, isOpen, isOpening, className }) {
 
       <div
         className="perspective-1000 preserve-3d relative"
-        style={{ width: BOX_SIZE, height: BOX_SIZE + 40 }}
+        style={{ width: boxSize, height: boxSize + 40 }}
       >
         <svg
-          width={BOX_SIZE}
-          height={BOX_SIZE + 40}
+          width={boxSize}
+          height={boxSize + 40}
           viewBox="0 0 200 240"
           className="relative z-10"
           aria-hidden="true"
@@ -99,7 +100,7 @@ export default function GiftBox({ onOpen, isOpen, isOpening, className }) {
 
         <motion.div
           className="absolute left-0 right-0"
-          style={{ top: 52, height: 56, transformOrigin: 'bottom center' }}
+          style={{ top: boxSize * 0.26, height: boxSize * 0.28, transformOrigin: 'bottom center' }}
           animate={
             isOpen || isOpening
               ? { rotateX: -110, y: -20, opacity: isOpen ? 0.6 : 1 }
@@ -107,7 +108,7 @@ export default function GiftBox({ onOpen, isOpen, isOpening, className }) {
           }
           transition={{ duration: prefersReducedMotion ? 0.2 : 0.7, ease: 'easeOut' }}
         >
-          <svg width={BOX_SIZE} height={70} viewBox="0 0 200 70" aria-hidden="true">
+          <svg width={boxSize} height={boxSize * 0.35} viewBox="0 0 200 70" aria-hidden="true">
             <rect x="24" y="20" width="152" height="36" rx="4" fill={BOX_COLOR} opacity="0.9" />
             <rect x="94" y="20" width="12" height="36" fill={RIBBON_COLOR} />
             <ellipse cx="78" cy="18" rx="18" ry="10" fill={RIBBON_COLOR} />
@@ -123,8 +124,8 @@ export default function GiftBox({ onOpen, isOpen, isOpening, className }) {
               className="absolute left-1/2 top-1/2 h-2 w-2 rounded-full bg-champagne-gold"
               initial={{ x: 0, y: 0, opacity: 1, scale: 1 }}
               animate={{
-                x: Math.cos((i / 8) * Math.PI * 2) * 80,
-                y: Math.sin((i / 8) * Math.PI * 2) * 80,
+                x: Math.cos((i / 8) * Math.PI * 2) * (isMobile ? 60 : 80),
+                y: Math.sin((i / 8) * Math.PI * 2) * (isMobile ? 60 : 80),
                 opacity: 0,
                 scale: 0,
               }}

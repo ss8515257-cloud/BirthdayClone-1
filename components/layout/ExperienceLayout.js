@@ -175,13 +175,13 @@ export default function ExperienceLayout() {
   return (
     <div className="relative">
       <ScrollProgress />
-      <SiteHeader />
+      <SiteHeader showBack />
       <SectionNav sections={sections} activeSection={activeSection} />
 
       <MagicalBackground />
       <MusicPlayer />
 
-      <div className="relative z-10">
+      <div className="relative z-10 pb-music-safe md:pb-0">
         {sections.map((section) => renderSection(section.id))}
       </div>
 

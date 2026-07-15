@@ -128,7 +128,7 @@ export default function HeroCake() {
       {HERO_SPARKLES.map((sparkle, i) => (
         <motion.span
           key={i}
-          className="absolute text-xs text-champagne-gold"
+          className="absolute text-xs text-cream-white/90"
           style={{ left: sparkle.left, top: sparkle.top }}
           animate={
             prefersReducedMotion

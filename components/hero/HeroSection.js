@@ -36,7 +36,7 @@ export default function HeroSection() {
       <Container className="relative z-10 flex flex-col items-center">
         {/* Subtitle */}
         <motion.p
-          className="heading-script mb-3 text-rose-pink sm:mb-4"
+          className="heading-script mb-3 text-cream-white/90 sm:mb-4"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2 }}
@@ -65,7 +65,7 @@ export default function HeroSection() {
 
         {/* Sparkle divider */}
         <motion.p
-          className="mb-8 text-sm tracking-[0.3em] text-champagne-gold/60 sm:mb-10"
+        className="mb-6 text-sm tracking-[0.2em] text-cream-white/60 sm:mb-10 sm:tracking-[0.3em]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
@@ -76,7 +76,7 @@ export default function HeroSection() {
 
         {/* Animated cake */}
         <motion.div
-          className="relative mb-10 sm:mb-12"
+          className="relative mb-6 sm:mb-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}

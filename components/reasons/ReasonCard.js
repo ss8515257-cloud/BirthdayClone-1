@@ -12,13 +12,24 @@ const ACCENT_COLORS = [
   '#B76E79',
 ];
 
+// Dark enough to read on the cream-white card surface
+const TITLE_COLORS = [
+  '#9D4B6A',
+  '#5B4578',
+  '#7A5C3E',
+  '#B45309',
+  '#6D28D9',
+  '#8B4A5C',
+];
+
 export default function ReasonCard({ reason, index, total, className }) {
   const accent = ACCENT_COLORS[index % ACCENT_COLORS.length];
+  const titleColor = TITLE_COLORS[index % TITLE_COLORS.length];
 
   return (
     <motion.div
       className={cn(
-        'relative mx-auto flex h-full w-full max-w-lg flex-col items-center justify-center rounded-2xl p-8 text-center shadow-premium sm:p-12',
+        'relative mx-auto flex h-full w-full max-w-lg flex-col items-center justify-center rounded-2xl p-5 text-center shadow-premium sm:p-8 md:p-12',
         className
       )}
       style={{
@@ -35,13 +46,13 @@ export default function ReasonCard({ reason, index, total, className }) {
         {index + 1} of {total}
       </span>
 
-      <p className="mb-3 font-poppins text-sm uppercase tracking-wider text-rose-gold/70">
+      <p className="mb-3 font-poppins text-sm uppercase tracking-wider text-night-sky/55">
         You are amazing because of
       </p>
 
       <h3
-        className="font-dancing text-4xl leading-tight sm:text-5xl md:text-6xl"
-        style={{ color: accent }}
+        className="font-dancing text-2xl leading-tight sm:text-4xl md:text-5xl lg:text-6xl"
+        style={{ color: titleColor }}
       >
         {reason}
       </h3>

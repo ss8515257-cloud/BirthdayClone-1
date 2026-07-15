@@ -8,18 +8,18 @@ export default function BookSpread({ page, pageNumber, totalPages, side = 'full'
   const showRight = side === 'full' || side === 'right';
 
   return (
-    <div className="flex h-full w-full">
+    <div className="flex h-full w-full flex-col sm:flex-row">
       {/* Left page — photo */}
       {showLeft && (
         <div
           className={cn(
-            'book-paper relative flex flex-col items-center justify-center border-r border-rose-gold/10 p-4 sm:p-6',
-            side === 'full' ? 'w-1/2' : 'w-full'
+            'book-paper relative flex flex-col items-center justify-center border-rose-gold/10 p-3 sm:border-r sm:p-6',
+            side === 'full' ? 'w-full sm:w-1/2' : 'w-full'
           )}
         >
           <GoldenCorners />
 
-          <div className="relative w-full max-w-[200px] sm:max-w-[240px]">
+          <div className="relative w-full max-w-[160px] sm:max-w-[240px]">
             {/* Polaroid-style photo frame */}
             <div className="rounded-sm bg-white p-2 pb-8 shadow-lg">
               <div
@@ -51,8 +51,8 @@ export default function BookSpread({ page, pageNumber, totalPages, side = 'full'
       {showRight && (
         <div
           className={cn(
-            'book-paper relative flex flex-col justify-center p-4 sm:p-8',
-            side === 'full' ? 'w-1/2' : 'w-full'
+            'book-paper relative flex flex-col justify-center border-t border-rose-gold/10 p-3 sm:border-t-0 sm:p-8',
+            side === 'full' ? 'w-full sm:w-1/2' : 'w-full'
           )}
         >
           <div className="bookmark-ribbon" aria-hidden="true" />
@@ -63,13 +63,13 @@ export default function BookSpread({ page, pageNumber, totalPages, side = 'full'
               {page.illustration}
             </span>
 
-            <h4 className="mb-3 font-playfair text-xl font-bold text-rose-gold sm:text-2xl">
+            <h4 className="mb-2 font-playfair text-lg font-bold text-rose-gold sm:mb-3 sm:text-2xl">
               {page.caption}
             </h4>
 
             <div className="mb-4 h-px w-16 bg-gradient-to-r from-champagne-gold to-transparent" />
 
-            <p className="font-dancing text-base leading-relaxed text-night-sky/75 sm:text-lg">
+            <p className="font-dancing text-sm leading-relaxed text-night-sky/75 sm:text-lg">
               {page.memory}
             </p>
 

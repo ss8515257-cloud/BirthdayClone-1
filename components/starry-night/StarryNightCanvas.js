@@ -47,7 +47,7 @@ export default function StarryNightCanvas({ className, onStarTouch }) {
     const height = container.clientHeight;
 
     const scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x0f0c29, 0.035);
+    scene.fog = new THREE.FogExp2(0x3b0764, 0.035);
 
     const camera = new THREE.PerspectiveCamera(55, width / height, 0.1, 100);
     camera.position.z = 6;
@@ -129,7 +129,7 @@ export default function StarryNightCanvas({ className, onStarTouch }) {
       const cloud = new THREE.Group();
       cloud.position.set(x, y, z);
       const mat = new THREE.MeshStandardMaterial({
-        color: 0x302b63,
+        color: 0x7e22ce,
         transparent: true,
         opacity: 0.2,
         roughness: 1,

@@ -36,11 +36,11 @@ function TrackCard({ track, isSelected, onSelect }) {
         </div>
 
         <div className="min-w-0 flex-1">
-          <p className="font-playfair text-lg font-semibold text-cream-white">
+          <p className="font-playfair text-base font-semibold text-cream-white sm:text-lg">
             {track.name}
           </p>
-          <p className="text-xs text-rose-pink/70">{track.mood}</p>
-          <p className="mt-1 truncate text-sm text-cream-white/50">
+          <p className="text-xs text-cream-white/80">{track.mood}</p>
+          <p className="mt-1 truncate text-sm text-cream-white/70">
             {track.description}
           </p>
         </div>
@@ -77,7 +77,7 @@ export default function MusicSelector({
       aria-label="Music selection"
     >
       <motion.div
-        className="glass-card relative max-h-[90vh] w-full max-w-lg overflow-y-auto p-6 sm:p-8"
+        className="glass-card relative max-h-[85dvh] w-full max-w-lg overflow-y-auto p-5 sm:max-h-[90vh] sm:p-8"
         initial={{ scale: 0.92, y: 24 }}
         animate={{ scale: 1, y: 0 }}
         exit={{ scale: 0.92, y: 24 }}
@@ -86,7 +86,7 @@ export default function MusicSelector({
         {onClose && (
           <button
             onClick={onClose}
-            className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-cream-white/60 transition-colors hover:bg-white/20 hover:text-cream-white"
+            className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-cream-white/75 transition-colors hover:bg-white/20 hover:text-white"
             aria-label="Close music selector"
           >
             <X className="h-4 w-4" />
@@ -100,14 +100,14 @@ export default function MusicSelector({
           <h3 className="heading-script text-gradient-luxury">
             Set the Mood
           </h3>
-          <p className="mt-2 text-sm text-cream-white/60">
+          <p className="mt-2 text-sm text-cream-white/75">
             Choose a soundtrack for your magical journey.
             <br />
-            <span className="text-cream-white/40">
+            <span className="text-cream-white/60">
               Music never plays without your permission.
             </span>
           </p>
-          <p className="mt-2 text-xs text-lavender/50">
+          <p className="mt-2 text-xs text-cream-white/50">
             Add your own MP3s to public/assets/music/ for full tracks.
             Ambient preview plays until then.
           </p>
@@ -126,7 +126,7 @@ export default function MusicSelector({
 
         <button
           onClick={onSkip}
-          className="mt-6 w-full rounded-xl py-3 text-center text-sm text-cream-white/50 transition-colors hover:bg-white/5 hover:text-cream-white/80"
+          className="mt-6 w-full rounded-xl py-3 text-center text-sm text-cream-white/70 transition-colors hover:bg-white/5 hover:text-cream-white/95"
         >
           Continue without music
         </button>

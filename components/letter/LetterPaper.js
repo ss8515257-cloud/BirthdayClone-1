@@ -40,7 +40,7 @@ export default function LetterPaper() {
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
       <div
-        className="relative overflow-hidden rounded-lg p-8 shadow-premium sm:p-12"
+        className="relative overflow-hidden rounded-lg p-5 shadow-premium sm:p-8 md:p-12"
         style={{
           background:
             'linear-gradient(135deg, #FFF8F0 0%, #FFF3E6 50%, #FDEBD8 100%)',
@@ -71,7 +71,7 @@ export default function LetterPaper() {
             <motion.p
               key={i}
               variants={line}
-              className="font-dancing text-lg leading-relaxed text-night-sky/80 sm:text-xl"
+              className="font-dancing text-base leading-relaxed text-night-sky/80 sm:text-lg md:text-xl"
             >
               {para}
             </motion.p>

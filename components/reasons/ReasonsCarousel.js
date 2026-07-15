@@ -82,7 +82,7 @@ export default function ReasonsCarousel() {
     <div className="mx-auto w-full max-w-2xl">
       {/* Progress bar */}
       <div className="mb-6 px-2">
-        <div className="mb-2 flex items-center justify-between font-poppins text-xs text-cream-white/50">
+        <div className="mb-2 flex items-center justify-between font-poppins text-xs text-cream-white/70">
           <span>{index + 1} / {TOTAL}</span>
           <span>{Math.round(progress)}%</span>
         </div>
@@ -97,7 +97,7 @@ export default function ReasonsCarousel() {
 
       {/* Card area */}
       <div
-        className="relative h-[340px] sm:h-[380px]"
+        className="relative h-[300px] sm:h-[340px] md:h-[380px]"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
@@ -128,12 +128,12 @@ export default function ReasonsCarousel() {
       </div>
 
       {/* Controls */}
-      <div className="mt-8 flex items-center justify-center gap-4">
+      <div className="mt-6 flex items-center justify-center gap-2 sm:mt-8 sm:gap-4">
         <button
           type="button"
           onClick={handlePrev}
           disabled={index === 0}
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-cream-white backdrop-blur transition hover:bg-white/20 disabled:opacity-30"
+          className="touch-target flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-cream-white backdrop-blur transition hover:bg-white/20 disabled:opacity-30 sm:h-12 sm:w-12"
           aria-label="Previous reason"
         >
           <ChevronLeft className="h-6 w-6" />
@@ -142,25 +142,25 @@ export default function ReasonsCarousel() {
         <button
           type="button"
           onClick={handleShuffle}
-          className="flex h-12 items-center gap-2 rounded-full bg-white/10 px-5 font-poppins text-sm text-cream-white backdrop-blur transition hover:bg-white/20"
+          className="touch-target flex h-11 items-center gap-2 rounded-full bg-white/10 px-3 font-poppins text-sm text-cream-white backdrop-blur transition hover:bg-white/20 sm:h-12 sm:px-5"
           aria-label="Random reason"
         >
           <Shuffle className="h-4 w-4" />
-          Surprise me
+          <span className="hidden sm:inline">Surprise me</span>
         </button>
 
         <button
           type="button"
           onClick={handleNext}
           disabled={index === TOTAL - 1}
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-cream-white backdrop-blur transition hover:bg-white/20 disabled:opacity-30"
+          className="touch-target flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-cream-white backdrop-blur transition hover:bg-white/20 disabled:opacity-30 sm:h-12 sm:w-12"
           aria-label="Next reason"
         >
           <ChevronRight className="h-6 w-6" />
         </button>
       </div>
 
-      <p className="mt-6 text-center font-dancing text-lg text-rose-pink/70">
+      <p className="mt-6 text-center font-dancing text-lg text-cream-white/80">
         Swipe or tap to discover more
       </p>
     </div>

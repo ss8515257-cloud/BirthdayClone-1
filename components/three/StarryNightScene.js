@@ -20,7 +20,7 @@ function SceneContent({ onStarTouch }) {
       <Clouds />
       <Fireflies />
       <CameraParallax strength={0.5} />
-      <fog attach="fog" args={['#0F0C29', 8, 25]} />
+      <fog attach="fog" args={['#3B0764', 8, 25]} />
     </>
   );
 }

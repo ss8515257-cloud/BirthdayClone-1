@@ -13,13 +13,18 @@ module.exports = {
         'rose-pink': '#E8A0BF',
         'lavender': '#C8B6E2',
         'cream-white': '#FFF8F0',
+        'warm-pearl': '#FFF5F7',
+        'blush': '#FCE7F3',
+        'petal': '#FBCFE8',
+        'bubblegum': '#F9A8D4',
+        'soft-lilac': '#EDE9FE',
         'light-purple': '#D4BBFC',
         'peach': '#FFDAB9',
         'rose-gold': '#B76E79',
         'champagne-gold': '#F7E7CE',
-        'night-sky': '#0F0C29',
-        'deep-purple': '#302B63',
-        'twilight': '#24243E',
+        'night-sky': '#3B0764',
+        'deep-purple': '#7E22CE',
+        'twilight': '#581C87',
       },
       fontFamily: {
         playfair: ['var(--font-playfair)', 'serif'],
@@ -28,9 +33,9 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-luxury':
-          'linear-gradient(135deg, #F8E8EE 0%, #C8B6E2 50%, #E8A0BF 100%)',
+          'linear-gradient(135deg, #FFF8F0 0%, #FFFFFF 50%, #F7E7CE 100%)',
         'gradient-night':
-          'linear-gradient(180deg, #0F0C29 0%, #302B63 50%, #24243E 100%)',
+          'linear-gradient(180deg, #3B0764 0%, #7E22CE 50%, #581C87 100%)',
         'gradient-sunrise':
           'linear-gradient(180deg, #FF6B6B 0%, #FFE66D 50%, #F8E8EE 100%)',
         'gradient-aurora':

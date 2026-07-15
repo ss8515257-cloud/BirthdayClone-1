@@ -38,20 +38,20 @@ export default function CinematicEnding() {
   }, [inView, prefersReducedMotion]);
 
   return (
-    <div ref={ref} className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden py-20">
+    <div ref={ref} className="relative flex min-h-screen-safe flex-col items-center justify-center overflow-hidden px-4 py-16 sm:py-20">
       {/* Cinematic vignette */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse at center, transparent 40%, rgba(15,12,41,0.85) 100%)',
+            'radial-gradient(ellipse at center, transparent 40%, rgba(59,7,100,0.85) 100%)',
         }}
         aria-hidden="true"
       />
 
       {/* Letterbox bars */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[8vh] bg-night-sky/80" aria-hidden="true" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[8vh] bg-night-sky/80" aria-hidden="true" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[5vh] bg-night-sky/80 sm:h-[8vh]" aria-hidden="true" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[5vh] bg-night-sky/80 sm:h-[8vh]" aria-hidden="true" />
 
       {/* Film grain */}
       <div
@@ -80,7 +80,7 @@ export default function CinematicEnding() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 mx-auto max-w-2xl px-6 text-center">
+      <div className="relative z-10 mx-auto max-w-2xl px-4 text-center sm:px-6">
         {/* Opening flourish */}
         <motion.div
           className="mb-6 flex justify-center gap-3"
@@ -90,13 +90,13 @@ export default function CinematicEnding() {
           aria-hidden="true"
         >
           <span className="h-px w-16 bg-gradient-to-r from-transparent to-champagne-gold/60" />
-          <span className="text-champagne-gold/60">✦</span>
+          <span className="text-cream-white/50">✦</span>
           <span className="h-px w-16 bg-gradient-to-l from-transparent to-champagne-gold/60" />
         </motion.div>
 
         {/* Name reveal */}
         <motion.p
-          className="mb-3 font-poppins text-xs uppercase tracking-[0.35em] text-champagne-gold/70"
+          className="mb-3 font-poppins text-xs uppercase tracking-[0.35em] text-cream-white/70"
           initial={{ opacity: 0, letterSpacing: '0.1em' }}
           animate={
             revealed
@@ -123,7 +123,7 @@ export default function CinematicEnding() {
         </motion.h2>
 
         <motion.p
-          className="heading-script mb-2 text-3xl text-rose-pink sm:text-4xl"
+          className="heading-script mb-2 text-2xl text-cream-white/90 sm:text-3xl md:text-4xl"
           initial={{ opacity: 0, y: 20 }}
           animate={revealed ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -132,7 +132,7 @@ export default function CinematicEnding() {
         </motion.p>
 
         <motion.p
-          className="mb-12 font-dancing text-xl text-lavender/80"
+          className="mb-8 font-dancing text-lg text-cream-white/95 sm:mb-12 sm:text-xl"
           initial={{ opacity: 0 }}
           animate={revealed ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 1.1 }}
@@ -149,7 +149,7 @@ export default function CinematicEnding() {
               variants={lineVariants}
               initial="hidden"
               animate={revealed ? 'visible' : 'hidden'}
-              className="font-dancing text-lg text-cream-white/85 sm:text-xl md:text-2xl"
+              className="font-dancing text-lg text-cream-white/95 sm:text-xl md:text-2xl"
             >
               {line}
             </motion.p>
@@ -163,7 +163,7 @@ export default function CinematicEnding() {
           animate={revealed ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.9, delay: 2.8 }}
         >
-          <p className="font-dancing text-xl italic leading-relaxed text-lavender sm:text-2xl">
+          <p className="font-dancing text-xl italic leading-relaxed text-cream-white/95 sm:text-2xl">
             &ldquo;{FINAL_MESSAGE.closing}&rdquo;
           </p>
         </motion.blockquote>
@@ -187,7 +187,7 @@ export default function CinematicEnding() {
           >
             {FINAL_MESSAGE.signature}
           </motion.span>
-          <p className="mt-3 font-dancing text-lg text-rose-pink/70">
+          <p className="mt-3 font-dancing text-lg text-cream-white/80">
             {FINAL_MESSAGE.forever}
           </p>
         </motion.div>
@@ -201,12 +201,12 @@ export default function CinematicEnding() {
         >
           <div className="flex items-center justify-center gap-4" aria-hidden="true">
             <span className="h-px w-12 bg-cream-white/20" />
-            <span className="text-champagne-gold/40">✦</span>
+            <span className="text-cream-white/40">✦</span>
             <span className="h-px w-12 bg-cream-white/20" />
           </div>
 
           <motion.p
-            className="font-playfair text-3xl tracking-widest text-cream-white/60 sm:text-4xl"
+            className="font-playfair text-3xl tracking-widest text-cream-white/90 sm:text-4xl"
             animate={
               prefersReducedMotion
                 ? {}
@@ -217,7 +217,7 @@ export default function CinematicEnding() {
             {FINAL_MESSAGE.endTitle}
           </motion.p>
 
-          <p className="font-poppins text-sm tracking-wide text-cream-white/30">
+          <p className="font-poppins text-sm tracking-wide text-cream-white/55">
             {FINAL_MESSAGE.endCredit}
           </p>
         </motion.div>
