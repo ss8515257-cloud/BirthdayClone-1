@@ -43,7 +43,7 @@ export default function WishGarden() {
       <FallingPetals />
 
       {/* Garden area */}
-      <div className="relative mx-auto min-h-[400px] w-full max-w-5xl sm:min-h-[520px] md:min-h-[580px]">
+      <div className="relative mx-auto min-h-[320px] w-full max-w-5xl sm:min-h-[520px] md:min-h-[580px]">
         {/* Floating bubbles */}
         <div className="absolute inset-0 hidden sm:block" aria-hidden={focusedIndex !== null}>
           {WISH_BUBBLE_POSITIONS.map((pos, i) => {
@@ -63,7 +63,7 @@ export default function WishGarden() {
         </div>
 
         {/* Featured wish — centered */}
-        <div className="relative z-20 flex min-h-[400px] items-center justify-center px-2 sm:min-h-[520px] md:min-h-[580px]">
+        <div className="relative z-20 flex min-h-[280px] items-center justify-center px-1 sm:min-h-[520px] sm:px-2 md:min-h-[580px]">
           <FeaturedWish
             activeIndex={featuredIndex}
             onIndexChange={setFeaturedIndex}
@@ -77,7 +77,7 @@ export default function WishGarden() {
       </p>
 
       {/* Mobile wish chips */}
-      <div className="relative z-10 mt-4 flex gap-3 overflow-x-auto px-2 pb-2 sm:hidden">
+      <div className="relative z-10 mt-4 flex gap-2 overflow-x-auto px-1 pb-2 scrollbar-none sm:hidden">
         {BIRTHDAY_WISHES.filter((_, i) => i % 13 === 0).map((wish, i) => {
           const wishIndex = i * 13;
           return (

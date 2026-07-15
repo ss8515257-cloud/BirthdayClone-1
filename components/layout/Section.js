@@ -19,7 +19,7 @@ export default function Section({
       id={id}
       aria-label={ariaLabel || id}
       className={cn(
-        'relative w-full scroll-mt-16 sm:scroll-mt-20',
+        'relative w-full scroll-mt-14 sm:scroll-mt-20',
         fullHeight && 'min-h-screen-safe',
         !noPadding && 'section-padding',
         className

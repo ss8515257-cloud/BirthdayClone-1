@@ -71,10 +71,8 @@ export default function HeroCake() {
       />
 
       <motion.svg
-        width="160"
-        height="160"
         viewBox="0 0 160 160"
-        className="relative z-10 sm:h-[200px] sm:w-[200px]"
+        className="relative z-10 h-[120px] w-[120px] max-[380px]:h-[100px] max-[380px]:w-[100px] sm:h-[200px] sm:w-[200px]"
         initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
         whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
         viewport={{ once: true }}

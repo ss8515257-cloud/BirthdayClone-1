@@ -26,8 +26,8 @@ export default function FeaturedWish({ activeIndex, onIndexChange }) {
 
   return (
     <div className="relative z-20 mx-auto w-full max-w-xl">
-      <div className="mb-4 flex items-center justify-between px-2">
-        <p className="font-dancing text-lg text-cream-white/95">
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-2 px-1 sm:mb-4 sm:px-2">
+        <p className="font-dancing text-base text-cream-white/95 sm:text-lg">
           {BIRTHDAY_WISHES_META.featuredHint}
         </p>
         <button
@@ -42,7 +42,7 @@ export default function FeaturedWish({ activeIndex, onIndexChange }) {
 
       <div
         className={cn(
-          'relative overflow-hidden rounded-3xl border border-white/20 p-5 text-center shadow-premium backdrop-blur-md sm:p-8 md:p-10',
+          'relative overflow-hidden rounded-3xl border border-white/20 p-4 text-center shadow-premium backdrop-blur-md sm:p-8 md:p-10',
           'bg-gradient-to-br from-rose-pink/20 via-lavender/15 to-champagne-gold/20'
         )}
       >

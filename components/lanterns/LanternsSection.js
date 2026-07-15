@@ -52,7 +52,7 @@ export default function LanternsSection() {
         </div>
 
         <Container className="pb-16 pt-6">
-          <p className="text-center font-dancing text-lg text-cream-white/70">
+          <p className="text-center font-dancing text-base text-cream-white/70 sm:text-lg">
             Tap a lantern to reveal a hidden message
           </p>
 
@@ -65,7 +65,7 @@ export default function LanternsSection() {
                 exit={{ opacity: 0, y: -10, scale: 0.95 }}
                 role="status"
               >
-                <p className="font-dancing text-xl text-cream-white/95">
+                <p className="font-dancing text-lg text-cream-white/95 sm:text-xl">
                   {activeMessage}
                 </p>
               </motion.div>

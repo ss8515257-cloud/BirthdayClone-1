@@ -74,7 +74,7 @@ export default function MemoryBook() {
     return (
       <div className="perspective-1000 mx-auto w-full max-w-sm sm:max-w-md">
         <div
-          className="preserve-3d relative h-[360px] sm:h-[420px] md:h-[480px]"
+          className="preserve-3d relative h-[min(72vh,360px)] sm:h-[420px] md:h-[480px]"
           style={{ transform: 'rotateY(-5deg) rotateX(2deg)' }}
         >
           <div className="absolute -bottom-4 left-4 right-4 h-4 rounded-full bg-black/20 blur-xl" />
@@ -101,12 +101,12 @@ export default function MemoryBook() {
           {/* Book spine */}
           <div className="absolute bottom-0 left-0 top-0 z-20 w-4 bg-gradient-to-r from-rose-gold/50 via-rose-gold/30 to-transparent" />
 
-          {/* Pages container */}
-          <div className="relative h-[320px] overflow-y-auto sm:h-[400px] md:h-[460px] sm:overflow-hidden">
+          {/* Pages container — flows naturally on mobile, fixed height on desktop */}
+          <div className="relative sm:h-[400px] md:h-[460px] sm:overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentPage}
-                className="absolute inset-0 flex"
+                className="flex sm:absolute sm:inset-0"
                 initial={
                   prefersReducedMotion
                     ? { opacity: 0 }

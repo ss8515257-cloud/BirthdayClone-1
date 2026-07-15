@@ -35,7 +35,7 @@ export default function HeroBackground() {
     <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
       {/* Moonlight beam */}
       <div
-        className="absolute left-1/2 top-0 h-full w-[600px] -translate-x-1/2 opacity-20"
+        className="absolute left-1/2 top-0 h-full w-full max-w-[600px] -translate-x-1/2 opacity-20"
         style={{
           background:
             'radial-gradient(ellipse at top, rgba(247,231,206,0.35) 0%, transparent 70%)',

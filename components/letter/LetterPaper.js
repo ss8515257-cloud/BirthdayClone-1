@@ -40,7 +40,7 @@ export default function LetterPaper() {
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
       <div
-        className="relative overflow-hidden rounded-lg p-5 shadow-premium sm:p-8 md:p-12"
+        className="relative overflow-hidden rounded-lg p-4 shadow-premium sm:p-8 md:p-12"
         style={{
           background:
             'linear-gradient(135deg, #FFF8F0 0%, #FFF3E6 50%, #FDEBD8 100%)',

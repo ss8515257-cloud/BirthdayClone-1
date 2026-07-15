@@ -14,13 +14,13 @@ const TOTAL = REASONS_YOU_ARE_AMAZING.length;
 
 const slideVariants = {
   enter: (dir) => ({
-    x: dir > 0 ? 280 : -280,
+    x: dir > 0 ? '100%' : '-100%',
     opacity: 0,
     scale: 0.92,
   }),
   center: { x: 0, opacity: 1, scale: 1 },
   exit: (dir) => ({
-    x: dir > 0 ? -280 : 280,
+    x: dir > 0 ? '-100%' : '100%',
     opacity: 0,
     scale: 0.92,
   }),
@@ -97,7 +97,7 @@ export default function ReasonsCarousel() {
 
       {/* Card area */}
       <div
-        className="relative h-[300px] sm:h-[340px] md:h-[380px]"
+        className="relative h-[min(52vh,300px)] min-h-[240px] sm:h-[340px] md:h-[380px]"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >

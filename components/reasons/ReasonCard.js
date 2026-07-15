@@ -29,7 +29,7 @@ export default function ReasonCard({ reason, index, total, className }) {
   return (
     <motion.div
       className={cn(
-        'relative mx-auto flex h-full w-full max-w-lg flex-col items-center justify-center rounded-2xl p-5 text-center shadow-premium sm:p-8 md:p-12',
+        'relative mx-auto flex h-full w-full max-w-lg flex-col items-center justify-center rounded-2xl p-4 text-center shadow-premium sm:p-8 md:p-12',
         className
       )}
       style={{
@@ -39,7 +39,7 @@ export default function ReasonCard({ reason, index, total, className }) {
     >
       {/* Number badge */}
       <span
-        className="mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-poppins text-xs font-medium uppercase tracking-widest"
+        className="mb-4 inline-flex items-center gap-2 rounded-full px-3 py-1 font-poppins text-[10px] font-medium uppercase tracking-widest sm:mb-6 sm:px-4 sm:py-1.5 sm:text-xs"
         style={{ backgroundColor: `${accent}33`, color: accent }}
       >
         <span aria-hidden="true">💝</span>
@@ -51,7 +51,7 @@ export default function ReasonCard({ reason, index, total, className }) {
       </p>
 
       <h3
-        className="font-dancing text-2xl leading-tight sm:text-4xl md:text-5xl lg:text-6xl"
+        className="font-dancing text-xl leading-tight sm:text-4xl md:text-5xl lg:text-6xl"
         style={{ color: titleColor }}
       >
         {reason}

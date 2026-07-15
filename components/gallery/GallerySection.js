@@ -29,7 +29,7 @@ export default function GallerySection() {
           emoji="📸"
         />
 
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-8 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4 lg:gap-8">
           {GALLERY_PHOTOS.map((photo, i) => (
             <Polaroid
               key={photo.id}

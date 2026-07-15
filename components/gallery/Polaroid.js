@@ -12,7 +12,7 @@ export default function Polaroid({ photo, index, onClick, className }) {
       type="button"
       onClick={onClick}
       className={cn(
-        'group relative block w-full rounded-sm bg-cream-white p-2 pb-10 shadow-premium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-pink sm:p-3 sm:pb-14',
+        'group relative block w-full rounded-sm bg-cream-white p-1.5 pb-8 shadow-premium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-pink sm:p-3 sm:pb-14',
         className
       )}
       style={{ rotate: `${rotate}deg` }}
@@ -52,7 +52,7 @@ export default function Polaroid({ photo, index, onClick, className }) {
 
       {/* Caption */}
       <div className="absolute inset-x-0 bottom-2 px-3 text-center">
-        <p className="font-dancing text-sm leading-tight text-night-sky/80 sm:text-lg">
+        <p className="font-dancing text-xs leading-tight text-night-sky/80 sm:text-lg">
           {caption}
         </p>
         {date && (

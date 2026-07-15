@@ -37,7 +37,7 @@ export default function Lightbox({ photos, index, onClose, onNavigate }) {
     <AnimatePresence>
       {isOpen && photo && (
         <motion.div
-          className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-4"
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center p-3 pb-[calc(env(safe-area-inset-bottom,0px)+4.5rem)] sm:p-4 sm:pb-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -49,37 +49,36 @@ export default function Lightbox({ photos, index, onClose, onNavigate }) {
           {/* Backdrop */}
           <div className="absolute inset-0 bg-night-sky/80 backdrop-blur-md" />
 
-          {/* Close */}
+          {/* Close — top-right, clear of nav buttons */}
           <button
             type="button"
             onClick={onClose}
-            className="absolute right-2 top-2 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-cream-white backdrop-blur transition hover:bg-white/20 sm:right-4 sm:top-4"
+            className="absolute right-3 top-[calc(env(safe-area-inset-top,0px)+0.75rem)] z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-cream-white backdrop-blur transition hover:bg-white/20 sm:right-4 sm:top-4"
             aria-label="Close"
           >
             <X className="h-6 w-6" />
           </button>
 
-          {/* Prev */}
+          {/* Desktop side arrows */}
           <button
             type="button"
             onClick={(e) => {
               e.stopPropagation();
               goPrev();
             }}
-            className="absolute left-2 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-cream-white backdrop-blur transition hover:bg-white/20 sm:left-6"
+            className="absolute left-2 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-cream-white backdrop-blur transition hover:bg-white/20 sm:flex sm:left-6"
             aria-label="Previous photo"
           >
             <ChevronLeft className="h-7 w-7" />
           </button>
 
-          {/* Next */}
           <button
             type="button"
             onClick={(e) => {
               e.stopPropagation();
               goNext();
             }}
-            className="absolute right-2 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-cream-white backdrop-blur transition hover:bg-white/20 sm:right-6"
+            className="absolute right-2 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-cream-white backdrop-blur transition hover:bg-white/20 sm:flex sm:right-6"
             aria-label="Next photo"
           >
             <ChevronRight className="h-7 w-7" />
@@ -88,7 +87,7 @@ export default function Lightbox({ photos, index, onClose, onNavigate }) {
           {/* Framed photo */}
           <motion.div
             key={photo.id}
-            className="relative z-[1] w-full max-w-lg rounded-lg bg-cream-white p-3 pb-12 shadow-premium sm:p-4 sm:pb-16"
+            className="relative z-[1] w-full max-w-[min(100%,28rem)] rounded-lg bg-cream-white p-2.5 pb-10 shadow-premium sm:max-w-lg sm:p-4 sm:pb-16"
             initial={{ scale: 0.85, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.85, opacity: 0, y: 20 }}
@@ -111,21 +110,49 @@ export default function Lightbox({ photos, index, onClose, onNavigate }) {
                     background: `linear-gradient(135deg, ${photo.color}, ${photo.color}aa)`,
                   }}
                 >
-                  <span className="text-8xl">{photo.illustration}</span>
+                  <span className="text-6xl sm:text-8xl">{photo.illustration}</span>
                 </div>
               )}
             </div>
-            <div className="absolute inset-x-0 bottom-4 px-4 text-center">
-              <p className="font-dancing text-lg text-night-sky/85 sm:text-2xl">
+            <div className="absolute inset-x-0 bottom-3 px-3 text-center sm:bottom-4 sm:px-4">
+              <p className="font-dancing text-base text-night-sky/85 sm:text-2xl">
                 {photo.caption}
               </p>
               {photo.date && (
-                <p className="mt-1 font-poppins text-xs uppercase tracking-widest text-rose-gold/70">
+                <p className="mt-1 font-poppins text-[10px] uppercase tracking-widest text-rose-gold/70 sm:text-xs">
                   {photo.date}
                 </p>
               )}
             </div>
           </motion.div>
+
+          {/* Mobile bottom nav bar — no overlap with close */}
+          <div
+            className="absolute inset-x-3 bottom-[calc(env(safe-area-inset-bottom,0px)+0.75rem)] z-10 flex items-center justify-between gap-2 sm:hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={goPrev}
+              className="touch-target flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-cream-white backdrop-blur transition active:bg-white/20"
+              aria-label="Previous photo"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+
+            <span className="rounded-full bg-white/10 px-4 py-2 font-poppins text-xs text-cream-white/80 backdrop-blur">
+              {index + 1} / {photos.length}
+            </span>
+
+            <button
+              type="button"
+              onClick={goNext}
+              className="touch-target flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-cream-white backdrop-blur transition active:bg-white/20"
+              aria-label="Next photo"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>

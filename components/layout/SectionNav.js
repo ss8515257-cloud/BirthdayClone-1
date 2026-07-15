@@ -74,8 +74,7 @@ export default function SectionNav({ sections, activeSection }) {
       {/* Mobile — bottom pill nav */}
       <motion.nav
         className={cn(
-          'fixed bottom-[5.25rem] left-1/2 z-40 flex max-w-[calc(100vw-2rem)] -translate-x-1/2 items-center gap-1 rounded-full border border-white/10 bg-night-sky/90 px-3 py-2 shadow-glass backdrop-blur-md md:hidden',
-          'safe-bottom'
+          'mobile-above-music fixed left-1/2 z-40 flex max-w-[calc(100vw-2rem)] -translate-x-1/2 items-center gap-1 rounded-full border border-white/10 bg-night-sky/90 px-2.5 py-1.5 shadow-glass backdrop-blur-md md:hidden',
         )}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: visible ? 1 : 0, y: visible ? 0 : 20 }}

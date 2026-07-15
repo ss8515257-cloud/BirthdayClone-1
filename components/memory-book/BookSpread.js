@@ -13,15 +13,15 @@ export default function BookSpread({ page, pageNumber, totalPages, side = 'full'
       {showLeft && (
         <div
           className={cn(
-            'book-paper relative flex flex-col items-center justify-center border-rose-gold/10 p-3 sm:border-r sm:p-6',
+            'book-paper relative flex shrink-0 flex-col items-center justify-center border-rose-gold/10 p-3 sm:border-r sm:p-6',
             side === 'full' ? 'w-full sm:w-1/2' : 'w-full'
           )}
         >
           <GoldenCorners />
 
-          <div className="relative w-full max-w-[160px] sm:max-w-[240px]">
+          <div className="relative w-full max-w-[120px] sm:max-w-[240px]">
             {/* Polaroid-style photo frame */}
-            <div className="rounded-sm bg-white p-2 pb-8 shadow-lg">
+            <div className="rounded-sm bg-white p-1.5 pb-6 shadow-lg sm:p-2 sm:pb-8">
               <div
                 className="flex aspect-square items-center justify-center rounded-sm"
                 style={{
@@ -29,19 +29,19 @@ export default function BookSpread({ page, pageNumber, totalPages, side = 'full'
                 }}
               >
                 <div className="text-center">
-                  <span className="text-4xl sm:text-5xl">{page.illustration}</span>
-                  <p className="mt-2 font-dancing text-xs text-night-sky/40 sm:text-sm">
+                  <span className="text-3xl sm:text-5xl">{page.illustration}</span>
+                  <p className="mt-1 font-dancing text-[10px] text-night-sky/40 sm:mt-2 sm:text-sm">
                     Your photo here
                   </p>
                 </div>
               </div>
-              <p className="mt-2 text-center font-dancing text-sm text-night-sky/60">
+              <p className="mt-1.5 text-center font-dancing text-xs text-night-sky/60 sm:mt-2 sm:text-sm">
                 {page.caption}
               </p>
             </div>
           </div>
 
-          <p className="mt-4 text-xs text-night-sky/30">
+          <p className="mt-2 text-[10px] text-night-sky/30 sm:mt-4 sm:text-xs">
             {pageNumber} / {totalPages}
           </p>
         </div>
@@ -51,29 +51,29 @@ export default function BookSpread({ page, pageNumber, totalPages, side = 'full'
       {showRight && (
         <div
           className={cn(
-            'book-paper relative flex flex-col justify-center border-t border-rose-gold/10 p-3 sm:border-t-0 sm:p-8',
+            'book-paper relative flex flex-1 flex-col justify-center border-t border-rose-gold/10 p-3 sm:border-t-0 sm:p-8',
             side === 'full' ? 'w-full sm:w-1/2' : 'w-full'
           )}
         >
-          <div className="bookmark-ribbon" aria-hidden="true" />
+          <div className="bookmark-ribbon hidden sm:block" aria-hidden="true" />
           <GoldenCorners />
 
           <div className="relative z-10">
-            <span className="mb-4 block text-5xl sm:text-6xl" aria-hidden="true">
+            <span className="mb-2 block text-3xl sm:mb-4 sm:text-6xl" aria-hidden="true">
               {page.illustration}
             </span>
 
-            <h4 className="mb-2 font-playfair text-lg font-bold text-rose-gold sm:mb-3 sm:text-2xl">
+            <h4 className="mb-1.5 font-playfair text-base font-bold text-rose-gold sm:mb-3 sm:text-2xl">
               {page.caption}
             </h4>
 
-            <div className="mb-4 h-px w-16 bg-gradient-to-r from-champagne-gold to-transparent" />
+            <div className="mb-2 h-px w-12 bg-gradient-to-r from-champagne-gold to-transparent sm:mb-4 sm:w-16" />
 
-            <p className="font-dancing text-sm leading-relaxed text-night-sky/75 sm:text-lg">
+            <p className="font-dancing text-xs leading-relaxed text-night-sky/75 sm:text-lg">
               {page.memory}
             </p>
 
-            <p className="mt-6 text-xs text-night-sky/30">
+            <p className="mt-3 text-[10px] text-night-sky/30 sm:mt-6 sm:text-xs">
               Chapter {pageNumber}
             </p>
           </div>

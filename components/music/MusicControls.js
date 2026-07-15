@@ -51,7 +51,7 @@ export default function MusicControls() {
 
   return (
     <motion.div
-      className="safe-bottom fixed bottom-3 left-3 right-3 z-40 mx-auto max-w-md sm:bottom-4 sm:left-auto sm:right-6 sm:mx-0"
+      className="mobile-music-bar fixed left-3 right-3 z-40 mx-auto max-w-md sm:bottom-4 sm:left-auto sm:right-6 sm:mx-0 md:safe-bottom"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5 }}
@@ -168,7 +168,7 @@ export function MusicFab() {
         vibrate(10);
         openMusicSelector();
       }}
-      className="glass-card safe-bottom fixed bottom-[5.25rem] right-4 z-40 flex h-11 w-11 items-center justify-center shadow-glow sm:bottom-6 sm:right-6 sm:h-12 sm:w-12"
+      className="glass-card fixed right-3 top-[calc(env(safe-area-inset-top,0px)+3.75rem)] z-40 flex h-11 w-11 items-center justify-center shadow-glow sm:right-6 sm:top-auto sm:bottom-6 sm:h-12 sm:w-12 md:safe-bottom"
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       whileHover={{ scale: 1.08 }}

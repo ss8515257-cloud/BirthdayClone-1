@@ -26,11 +26,11 @@ export default function HotAirBalloonSection() {
           <HotAirBalloonCanvas className="h-full w-full" />
         </div>
 
-        <Container className="pb-16 pt-6">
-          <p className="text-center font-dancing text-xl text-cream-white/80">
+        <Container className="pb-12 pt-4 sm:pb-16 sm:pt-6">
+          <p className="text-center font-dancing text-lg text-cream-white/80 sm:text-xl">
             Happy Birthday Gurleen ❤️
           </p>
-          <p className="mt-2 text-center text-sm text-cream-white/60">
+          <p className="mt-2 text-center text-xs text-cream-white/60 sm:text-sm">
             Watch the balloon drift across a sky full of dreams
           </p>
         </Container>

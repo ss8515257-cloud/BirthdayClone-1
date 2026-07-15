@@ -46,7 +46,7 @@ export default function HeroCTA({ onClick }) {
         onClick={handleClick}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="btn-magnetic relative overflow-hidden bg-gradient-to-r from-rose-pink via-lavender to-rose-pink bg-[length:200%_100%] px-6 py-3 text-base font-semibold text-night-sky shadow-glow-lg sm:px-10 sm:py-4 sm:text-lg"
+        className="btn-magnetic relative w-full max-w-xs overflow-hidden bg-gradient-to-r from-rose-pink via-lavender to-rose-pink bg-[length:200%_100%] px-5 py-3 text-sm font-semibold text-night-sky shadow-glow-lg sm:w-auto sm:max-w-none sm:px-10 sm:py-4 sm:text-lg"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

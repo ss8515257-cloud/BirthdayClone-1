@@ -47,13 +47,13 @@ export default function SunriseSection() {
       noPadding
       className="relative"
     >
-      <div ref={containerRef} className="relative h-[180vh] sm:h-[220vh] md:h-[250vh]">
+      <div ref={containerRef} className="relative h-[140vh] sm:h-[180vh] md:h-[220vh]">
         <div className="sticky top-0 h-screen min-h-screen-safe">
           <SunriseScene progress={scrollYProgress} />
 
           {!prefersReducedMotion && (
             <motion.div
-              className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2 text-center"
+              className="absolute bottom-[calc(env(safe-area-inset-bottom,0px)+5rem)] left-1/2 z-20 -translate-x-1/2 text-center sm:bottom-8"
               initial={{ opacity: 1 }}
               animate={{ opacity: [1, 0.4, 1], y: [0, 8, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
